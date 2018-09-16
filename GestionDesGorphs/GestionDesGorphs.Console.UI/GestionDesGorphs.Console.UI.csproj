@@ -44,9 +44,13 @@
   <ItemGroup>
     <Compile Include="Action.cs" />
     <Compile Include="AjouterAnimalAction.cs" />
+    <Compile Include="FabricAction.cs" />
+    <Compile Include="IAction.cs" />
     <Compile Include="ListerAnimauxAction.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sertapil.cs" />
+    <Compile Include="SortieAction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
