@@ -15,6 +15,13 @@ namespace GestionDesGorphs.Console.UI
             System.Console.WriteLine("Ajout d'un nouveau sertapil");
 
             System.Console.WriteLine("Choisissez le nom :");
+            animal.Nom = System.Console.ReadLine();
+
+            System.Console.WriteLine("Choisissez la taille :");
+            animal.Taille = decimal.Parse(System.Console.ReadLine());
+
+            System.Console.WriteLine("Choisissez le prix de naissance :");
+            animal.PrixNaissance = decimal.Parse(System.Console.ReadLine());
 
             using (SqlConnection connection = new SqlConnection(@"Server=DESKTOP-LES1U0B\SQLEXPRESS;Database=BaseSuiviSertapils;Trusted_Connection=True;"))
             {
@@ -25,6 +32,8 @@ namespace GestionDesGorphs.Console.UI
                     command.CommandText = sql;
 
                     command.ExecuteNonQuery();
+
+                    System.Console.WriteLine("Le sertapil a bien été ajouté");
                 }
             }
         }
